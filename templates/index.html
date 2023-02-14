@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+   <title>ジュリアセット</title>
+</head>
+<body >
+<h1>
+        ジュリアセット
+    </h1>
+
+
+<form id="julia-form" action='/julia'>
+        <label for="min_x">実数部最小値:</label>
+        <input type="text" id="min_x" name="min_x" value="-0.5">
+        <br><br>
+        <label for="max_x">実数部最大値:</label>
+        <input type="text" id="max_x" name="max_x" value="0.5">
+        <br><br>
+        <label for="min_y">虚数部最小値:</label>
+        <input type="text" id="min_y" name="min_y" value="-0.5">
+        <br><br>
+        <label for="max_y">虚数部最大値:</label>
+        <input type="text" id="max_y" name="max_y" value="0.5">
+        <br><br>
+        <label for="comp_const">複素定数:</label>
+        <input type="text" id="comp_const" name="comp_const" value="-0.3,-0.63">
+        <br><br>
+        <button type="submit" formmethod="GET" id="submit-button">以上のジュリアセットを描画する</button>
+      </form>
+      <div id="output"></div>
+    </body>
+</html>
