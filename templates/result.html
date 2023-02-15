@@ -8,26 +8,31 @@
 <h1>
         ジュリアセット
     </h1>
+<!--<p>-->
+<!--    {{color_bar}}-->
+<!--</p>-->
 <script>
      (function() {
     const canvas = document.createElement('canvas');
     var julia_matrix = JSON.parse("{{julia_set}}");
+    var colors = JSON.parse("{{colors}}");
     console.log(julia_matrix);
     var max_iter = {{max_iter}}
     canvas.width = {{width}};
     canvas.height = {{height}};
     document.body.appendChild(canvas);
     const ctx = canvas.getContext('2d');
+    for (let i = 0; i < julia_matrix.length; i++) {
+    julia_arr = julia_matrix[i]
+    for (let j = 0; j < julia_arr.length; j++) {
+    julia_num = julia_arr[j]
+    color = colors[julia_num]
+<!--    console.log(`#${color.toString(16)}`)-->
+    ctx.fillStyle = `#${color.toString(16)}`
+    ctx.fillRect(j,i,1,1);
 
-    ctx.fillRect(1,1, 3, 100);
-    ctx.fillRect(1,1, 100,3);
-<!--    for (let i = 0; i < julia_matrix.length; i++) {-->
-<!--    julia_arr = julia_matrix[i]-->
-<!--    for (let j = 0; j < julia_arr.length; j++) {-->
-<!--    julia_num = julia_arr[j]-->
-<!--    -->
-<!--  }-->
-<!--  }-->
+  }
+  }
   })();
 
 </script>
