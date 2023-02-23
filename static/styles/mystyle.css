@@ -1,0 +1,9 @@
+.sideBySide {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid;
+  padding: 0;
+}
+.sideBySide div {
+  padding: 10px 20px;
+}
