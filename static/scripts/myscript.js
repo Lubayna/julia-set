@@ -15,7 +15,6 @@ function addCanvas(canvas) {
     }
     const c = document.createElement('div')
     c.setAttribute("id", "juliaDiagram")
-    //c.classList.add("sideBySide")
     c.appendChild(canvas)
     document.getElementById("presenter").appendChild(c)
 }
