@@ -6,6 +6,9 @@ Python、JavaScriptを用いてジュリア集合の生成と描画をするウ�
 
 アプリケーションにアクセスするには、[http://localhost:8080/satori/julia]にアクセスし、適切な入力値を入力し、「ジュリアセットを描画する」ボタンをクリックして、指定されたカラーマップを使用してJulia Setを表すグラフを表示します。不適切な値が入力された場合は、エラーがアラートで表示されます。
 
+## 動作チェック
+https://user-images.githubusercontent.com/56100529/221090808-22c48f41-2eef-4ab6-88e8-4f02a2c790a5.mov
+
 ## 構築環境
 * Backend: Python 3.9.15
 * Frontend: HTML Javascript CSS
