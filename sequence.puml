@@ -1,0 +1,28 @@
+
+@startuml
+!include https://raw.githubusercontent.com/future-architect/puml-themes/master/themes/puml-theme-mars.puml
+actor User
+participant フロントエンド[
+    =フロントエンド
+    ----
+    ""Served on Flask""
+]
+participant バックエンド[
+    =バックエンド
+    ----
+    ""Served on Flask""
+]
+autonumber
+User -> フロントエンド : http://localhost:8080/satori/juliaにアクセス
+フロントエンド <- バックエンド : 以下のファイルを送信\n- index.html\n- myscript.js\n- mystyle.css
+フロントエンド -> フロントエンド : 入力フォームを表示
+User -> フロントエンド : フォームを入力し「ジュリアセットを描画」をクリック
+group AJAX
+フロントエンド -> バックエンド : フォームの入力を送信
+バックエンド -> フロントエンド : 以下のJSONデータを送信\n- ジュリアセット\n- カラーバー　\n- グラフの幅、高さ
+フロントエンド -> フロントエンド : ジュリアセットを表現するグラフの描画と表示
+end
+
+
+User -> フロントエンド : 結果を満足する=) or 5に再生成する
+@enduml

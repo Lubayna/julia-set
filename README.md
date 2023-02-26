@@ -42,7 +42,7 @@ https://user-images.githubusercontent.com/56100529/221092164-b08d6fb7-4a1c-4cca-
   - 反復回数max_iter
   - 幅width
   - 高さheight
-  - Pythonのmatplotlibの配色colormap
+  - PythonのMatplotlibの配色colormap
   
  受信したパラメータに基づいて、エラーチェックし、エラーがあれば、エラーメッセージを返します。エラーがなければ、バックエンドは収束/発散のしきい値2で生成するジュリアセット、指定した配色のcolormapに基づいて生成するmax_iter範囲のRGBhex二進数表記のカラーバー、グラフの幅と高さを返します。
 
@@ -59,11 +59,11 @@ https://user-images.githubusercontent.com/56100529/221092164-b08d6fb7-4a1c-4cca-
     - 幅width
     - 高さheight
     - 以下の値が選択可能である
-    - Pythonのmatplotlibの配色colormap: coolwarm、viridis、PiYG、PuOr、twilight、Spectral、RdGy
+    - PythonのMatplotlibの配色colormap: coolwarm、viridis、PiYG、PuOr、twilight、Spectral、RdGy
 
   以上の入力フォームはCSSが使用されてスタイルが適用されます。
 
   - HTMLの「ジュリアセットを描画する」ボタンを押すと、フロントエンドはJavaScriptファイル内の関数を呼び出し、Ajaxを使用してバックエンドと通信し、パラメータを送信します。バックエンドはエラーメッセージを返すか、ジュリアセット、カラーバーとグラフの幅と高さを返します。エラーメッセージが返される場合は、エラーメッセージがアラートで表示されます。ジュリアセット、カラーバーとグラフの幅と高さが返される場合は、指定配色のジュリアセットグラフを表現するキャンバスが作成され、作成したキャンバスがDOMに追加されます。
 
-
-
+## シーケンス図
+![](sequence.svg)
