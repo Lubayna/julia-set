@@ -1,15 +1,20 @@
 async function clickedButton() {
+    // ジュリアセットを描画するためのレスポンスデータを取得
     const data = await getJuliaData()
     if (data.error) {
         alert(`エラー: ${data.error}`)
         return
     }
+    // レスポンスデータがエラーではない時、canvasに描画する
     const canvas = createCanvas(data)
+    // 描画したcanvasをjuliaDiagramブロックに追加する
     addCanvas(canvas)
 }
 
+// 描画したcanvasを載せるjuliaDiagramをpresenterに追加する関数
 function addCanvas(canvas) {
     const old = document.getElementById("juliaDiagram")
+    // canvasを追加する時、もし古いcanvasがあれば、まず消す
     if (old !== null) {
         old.remove()
     }
@@ -19,6 +24,7 @@ function addCanvas(canvas) {
     document.getElementById("presenter").appendChild(c)
 }
 
+// バックエンドと通信し、パラメータを送信、レスポンスを取得する関数
 async function getJuliaData() {
     const min_x = Number(document.getElementById("min_x").value)
     const max_x = Number(document.getElementById("max_x").value)
@@ -53,6 +59,7 @@ async function getJuliaData() {
     })
 }
 
+// レスポンスデータに基づいてジュリアセットをcanvasに描画する関数
 function createCanvas(data) {
 
     const canvas = document.createElement('canvas')
@@ -66,6 +73,7 @@ function createCanvas(data) {
         for (let j = 0; j < julia_arr.length; j++) {
             julia_num = julia_arr[j]
             var color = colors[julia_num]
+            // カラーバーに基づいて色をcanvasに描画
             ctx.fillStyle = `#${color.toString(16)}`
             ctx.fillRect(j,i,1,1)
         }
